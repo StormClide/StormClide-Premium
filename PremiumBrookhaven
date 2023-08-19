@@ -15,7 +15,8 @@ local Tab = Window:CreateTab({Name="Main"})
 local Label = Tab:CreateLabel("Change Logs\n\n  •Added JumpPower!\n\n •Edited JumpPower Value to 100-500\n\n ")
 local Label = Tab:CreateLabel("Ownership Team\n\n Owners\n\n  •StormClide\n\n  •Icy\n\n  •HexR\n\n  •Zeltales\n\n \nProgrammars\n\n  •None\n\n")
 local Label = Tab:CreateLabel("Join Our Discord\n\n https://discord.gg/stormclide\n\n  •You can get support from there")
-local Label = Tab:CreateLabel("Current Version:\n\n")
+local Label = Tab:CreateLabel("Current Version:\n\n The Current Version is:\n\n  •V1")
+local Label = Tab:CreateLabel("Bugs:\n\n If there is any bugs Please report it to the Owners\n\n")
 
 local Tab = Window:CreateTab({Name="Car"})
 
@@ -52,4 +53,4 @@ local Input = Tab:CreateInput({
     end,
 })
 
-local Label = Tab:CreateLabel("Bugs:\n\n If there is any bugs Please report it to the Owners\n\n")
+
