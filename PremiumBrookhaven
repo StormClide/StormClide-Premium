@@ -1,0 +1,55 @@
+local DevTools = loadstring(game:HttpGet("https://raw.githubusercontent.com/05-4/DevTools/main/index.lua"))()
+local Window = DevTools:Init({
+    Name = "StormClide| Brookhaven Premium", -- Required: Provide a name for the window
+    Title = "StormClide Presents", -- Required: Set the title of the loading screen
+    Subtitle = "by @Porman", -- Required: Add a brief description for the loading screen
+    Icon = "rbxassetid://6031280882", -- Optional: Set an icon for the window
+    LoadingBackgroundImage = "rbxassetid://13677037989", -- Optional: Set a background image for the loading screen
+    Options = {
+        KillYourself = false, -- Optional: Set to true to reset character on launch
+        FOVAnimations = true, -- Optional: Set to true to enable FOV Animations
+    }
+})
+
+local Tab = Window:CreateTab({Name="Main"})
+local Label = Tab:CreateLabel("Change Logs\n\n  •Added JumpPower!\n\n •Edited JumpPower Value to 100-500\n\n ")
+local Label = Tab:CreateLabel("Ownership Team\n\n Owners\n\n  •StormClide\n\n  •Icy\n\n  •HexR\n\n  •Zeltales\n\n \nProgrammars\n\n  •None\n\n")
+local Label = Tab:CreateLabel("Join Our Discord\n\n https://discord.gg/stormclide\n\n  •You can get support from there")
+local Label = Tab:CreateLabel("Current Version:\n\n")
+
+local Tab = Window:CreateTab({Name="Car"})
+
+
+local Tab = Window:CreateTab({Name="Fun"})
+
+local SLider = Tab:CreateSlider({
+    Name = "Walkspeed",
+    Suffix = "Speed",
+
+    Range = {16,100},
+    Interval = 1,
+    Default = 16,
+
+    Callback = function(Value)
+    DevTools.Player:SetSpeed(Value)
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Reset",
+    Callback = function()
+        DevTools.Player:Kill()
+    end,
+})
+
+local Input = Tab:CreateInput({
+    Name = "Input",
+
+    Range = {16,500},
+    Callback = function(Value)
+        DevTools.Player:SetJumPower(Value)
+        print(Value)
+    end,
+})
+
+local Label = Tab:CreateLabel("Bugs:\n\n If there is any bugs Please report it to the Owners\n\n")
