@@ -12,7 +12,7 @@ local Window = DevTools:Init({
 })
 
 local Tab = Window:CreateTab({Name="Main"})
-local Label = Tab:CreateLabel("Change Logs\n\n  •Added JumpPower!\n\n •Edited JumpPower Value to 100-500\n\n ")
+local Label = Tab:CreateLabel("Change Logs\n\n  •Added JumpPower!\n\n •Edited JumpPower Value to 100-500\n\n  •Added Sections Into the Walkspeed/JumpPower\n\n ")
 local Label = Tab:CreateLabel("Ownership Team\n\n Owners\n\n  •StormClide\n\n  •Icy\n\n  •HexR\n\n  •Zeltales\n\n \nProgrammars\n\n  •None\n\n")
 local Label = Tab:CreateLabel("Join Our Discord\n\n https://discord.gg/stormclide\n\n  •You can get support from there")
 local Label = Tab:CreateLabel("Current Version:\n\n The Current Version is:\n\n  •V1")
@@ -22,6 +22,17 @@ local Tab = Window:CreateTab({Name="Car"})
 
 
 local Tab = Window:CreateTab({Name="Fun"})
+
+
+local Label = Tab:CreateLabel("Reset Button")
+local Button = Tab:CreateButton({
+    Name = "Reset",
+    Callback = function()
+        DevTools.Player:Kill()
+    end,
+})
+
+local Section = Tab:CreateSection("Powers")
 
 local SLider = Tab:CreateSlider({
     Name = "Walkspeed",
@@ -35,22 +46,15 @@ local SLider = Tab:CreateSlider({
     DevTools.Player:SetSpeed(Value)
     end,
 })
-
-local Button = Tab:CreateButton({
-    Name = "Reset",
-    Callback = function()
-        DevTools.Player:Kill()
-    end,
-})
-
-local Input = Tab:CreateInput({
-    Name = "Input",
+local Slider = Tab:CreateSlider({
+    Name = "JumpPower",
+    Suffix = "Feet",
 
     Range = {16,500},
+    Interval = 1,
+    Default = 16,
+
     Callback = function(Value)
-        DevTools.Player:SetJumPower(Value)
-        print(Value)
+    DevTools.Player:SetJumpPower(Value)
     end,
 })
-
-
