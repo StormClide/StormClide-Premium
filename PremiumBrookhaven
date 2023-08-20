@@ -12,7 +12,7 @@ local Window = DevTools:Init({
 })
 
 local Tab = Window:CreateTab({Name="Main"})
-local Label = Tab:CreateLabel("Change Logs\n\n  •Added JumpPower!\n\n •Edited JumpPower Value to 100-500\n\n  •Added Sections Into the Walkspeed/JumpPower\n\n ")
+local Label = Tab:CreateLabel("Change Logs\n\n   •Added New Tab\n\n")
 local Label = Tab:CreateLabel("Ownership Team\n\n Owners\n\n  •StormClide\n\n  •Icy\n\n  •HexR\n\n  •Zeltales\n\n \nProgrammars\n\n  •None\n\n")
 local Label = Tab:CreateLabel("Join Our Discord\n\n https://discord.gg/stormclide\n\n  •You can get support from there")
 local Label = Tab:CreateLabel("Current Version:\n\n The Current Version is:\n\n  •V1")
@@ -58,3 +58,7 @@ local Slider = Tab:CreateSlider({
     DevTools.Player:SetJumpPower(Value)
     end,
 })
+
+
+
+local Tab = Window:CreateTab({Name="Other"})
